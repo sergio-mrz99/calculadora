@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <style>
+        body {
+            background-image: url("./fondo.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .titulo{
+            font-size: 70px;
+            font-weight: bold;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .titulo2{
+            font-size: 40px;
+            font-weight: bold;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #caja {
+            background: rgba(255, 0, 0, 0.76);
+            padding: 50px;
+            border-radius: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <div id="caja">
+            <h1 class="titulo">CALCULADORA</h1>
+            <input id="numero1" type="number">
+            <input id="numero2" type="number"><br><br>
+
+            <button id="botonSumar" onclick="sumar()">SUMAR</button>
+            <button id="botonRestar" onclick="restar()">RESTAR</button>
+            <button id="botonDividir" onclick="dividir()">DIVIDIR</button>
+            <button id="botonMultiplicar" onclick="multiplicar()">MULTIPLICAR</button>
+            <button id="botonMultiplicar" onclick="resto()">RESTO</button><br><br>
+
+            <p id="resultado" class="titulo2">RESULTADO</p>
+
+            <script>
+                function sumar() {
+                    var numero1 = parseInt(document.getElementById('numero1').value)
+                    var numero2 = parseInt(document.getElementById('numero2').value)
+                    var resultado = numero1 + numero2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+
+                function restar() {
+                    var numero1 = parseInt(document.getElementById('numero1').value)
+                    var numero2 = parseInt(document.getElementById('numero2').value)
+                    var resultado = numero1 - numero2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+
+                function dividir() {
+                    var numero1 = parseInt(document.getElementById('numero1').value)
+                    var numero2 = parseInt(document.getElementById('numero2').value)
+                    var resultado = numero1 / numero2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+
+                function multiplicar() {
+                    var numero1 = parseInt(document.getElementById('numero1').value)
+                    var numero2 = parseInt(document.getElementById('numero2').value)
+                    var resultado = numero1 * numero2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+                function resto() {
+                    var numero1 = parseInt(document.getElementById('numero1').value)
+                    var numero2 = parseInt(document.getElementById('numero2').value)
+                    var resultado = numero1 % numero2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+            </script>
+        </div>
+    </center>
+
+</body>
+
+
+</html>
